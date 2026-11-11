@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+# Checkmk local check: Toilet Tank + Toilet Flushes, from the watcher's state file.
+import sys, time
+sys.path.insert(0, "/opt/toilet-monitor")
+from toilet_watch import load_state, render_local_check
+sys.stdout.write(render_local_check(load_state(), time.time()))

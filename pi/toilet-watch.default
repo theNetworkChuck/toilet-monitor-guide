@@ -1,0 +1,11 @@
+# GPIO pin the float switch signal wire is on (BCM numbering). 17 = physical pin 11.
+TOILET_GPIO=17
+# This switch connects when the float drops, so a full tank leaves it open.
+TOILET_FULL_WHEN=open
+TOILET_DEBOUNCE=1.0
+# Slack message on every flush (optional; leave blank for none).
+# Best: an incoming webhook, which can only post to the one channel it was made for.
+TOILET_SLACK_WEBHOOK_URL=
+# Or: a bot token plus the channel ID it posts to.
+TOILET_SLACK_BOT_TOKEN=
+TOILET_SLACK_CHANNEL=

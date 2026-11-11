@@ -1,0 +1,12 @@
+[Unit]
+Description=Toilet tank watcher (float switch on a Raspberry Pi)
+After=multi-user.target
+
+[Service]
+EnvironmentFile=/etc/default/toilet-watch
+ExecStart=/usr/bin/python3 /opt/toilet-monitor/toilet_watch.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
